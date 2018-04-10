@@ -13,15 +13,15 @@ const tick = () => {
     data.forEach( el => {
       const symbol = (el.pair).replace(eval('/'+el.currency+'/ig'),'')
       if( ['BTC','ETH','XRP','BCH','LTC','BTG','DASH'].indexOf(symbol) != -1){
-        const trend = persist[symbol] > el.ask  ? '▾' : (
-          persist[symbol] < el.ask  ? '▴' : (
-          persist[symbol] == el.ask ? '=' :  '•'
+        const precio = el.bid
+        const trend = persist[symbol] > precio  ? '▾' : (
+          persist[symbol] < precio  ? '▴' : (
+          persist[symbol] == precio ? '=' :  '•'
           ))
           const cl_trend = trend == '▾' ? 'down' : (
              trend == '▴' ? 'up'   : (
              trend == '•' ? 'ini'  : 'eq'
              ))
-        const precio = el.bid
         $ticker.innerHTML += `
           <div class='row'>
             <div style='width: 5rem'>${symbol}</div>
@@ -36,15 +36,15 @@ const tick = () => {
     data.forEach( el => {
       const symbol = (el.pair).replace(eval('/'+el.currency+'/ig'),'')
       if( ['GBP','CNY','EUR'].indexOf(symbol) != -1){
-        const trend = persist[symbol] > el.ask  ? '▾' : (
-                      persist[symbol] < el.ask  ? '▴' : (
-                      persist[symbol] == el.ask ? '=' :  '•'
+        const precio = el.bid
+        const trend = persist[symbol] > precio  ? '▾' : (
+                      persist[symbol] < precio  ? '▴' : (
+                      persist[symbol] == precio ? '=' :  '•'
                       ))
         const cl_trend = trend == '▾' ? 'down' : (
                          trend == '▴' ? 'up'   : (
                          trend == '•' ? 'ini'  : 'eq'
                          ))
-        const precio = el.bid
         $ticker.innerHTML += `
           <div class='row'>
             <div style='width: 5rem'>${symbol}</div>
