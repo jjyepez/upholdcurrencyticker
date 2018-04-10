@@ -27,3 +27,20 @@ body{
 .ini{
   color: #ccc;
 }
+.progress{
+  position: fixed;
+  height: 3px;
+  width: 100vw;
+  background-color: #369;
+  top:0;
+  left:0;
+  transform: scale3d(0,1,1);
+  transform-origin: center left;
+}
+.progresando {
+  animation: progress 25s linear infinite;
+}
+@keyframes progress {
+  from{ transform: scale3d(0,1,1) }
+  to  { transform: scale3d(1,1,1) }
+}

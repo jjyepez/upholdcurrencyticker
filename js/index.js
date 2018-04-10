@@ -1,5 +1,9 @@
+const ti = 25000
 let persist = []
 const tick = () => {
+  const $p = document.querySelector('.progress')
+  $p.classList.remove('progresando')
+  $p.classList.add('progresando')
   fetch('https://noesishosting.com/sw/cors/?a=cors&url=https://api.uphold.com/v0/ticker/USD')
   .then( rsp => rsp.json() )
   .then( data => {
@@ -57,4 +61,4 @@ const tick = () => {
   })
 }
 tick()
-setInterval( tick, 40000 )
+setInterval( tick, ti )
