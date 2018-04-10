@@ -38,7 +38,7 @@ body{
   transform-origin: center left;
 }
 .progresando {
-  animation: progress 25s linear infinite;
+  animation: progress 40s linear infinite;
 }
 @keyframes progress {
   from{ transform: scale3d(0,1,1) }

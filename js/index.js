@@ -1,4 +1,4 @@
-const ti = 25000
+const ti = 40000
 let persist = []
 const tick = () => {
   const $p = document.querySelector('.progress')
