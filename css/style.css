@@ -1,0 +1,29 @@
+body{
+  height: 100vh;
+  font-family: monospace;
+  display: flex;
+  color: #333;
+  align-items: center;
+  justify-content: center;
+}
+.row{
+  padding: .25rem 1rem;
+  display:flex;
+  width:300px;
+  font-size:1.5rem;
+}
+.row:nth-child(2n+1){
+  background-color: #eee
+}
+.down{
+  color:red;
+}
+.up{
+  color: green;
+}
+.eq{
+  color: #777;
+}
+.ini{
+  color: #ccc;
+}
